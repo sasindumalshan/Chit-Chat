@@ -13,27 +13,42 @@
         /*attribute selector*/
         /* Universal selector*/
 
-        /* Universal selector*/
-        *{
-            color: red;
-            font-family: 'Edu NSW ACT Foundation', cursive;
+        /* Universal selector - select all at onece*/
+        /**{*/
+        /*    color: red;*/
+        /*    font-family: 'Edu NSW ACT Foundation', cursive;*/
+        /*}*/
+
+        /*type selector - select with type*/
+        /*p{*/
+        /*    color: black;*/
+        /*    background-color: orange;*/
+        /*}*/
+
+        /*class selector - select a range of elements*/
+        .selected{
+            border: 1px solid red;
         }
+
+
 
     </style>
 </head>
 <body>
 <section>
-    <h1 >Hello CSS</h1>
+    <h1 class="selected">Hello CSS</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet atque, aut dolores ducimus est id ipsum
         nihil perferendis, praesentium quo quod rerum sint soluta suscipit tempora temporibus unde, vel.</p>
-    <h2>Testing CSS Selectors</h2>
-    <h2>Testing CSS Selectors</h2>
+    <h2 >Testing CSS Selectors</h2>
+    <h2 class="selected">Testing CSS Selectors</h2>
     <h2>Testing CSS Selectors</h2>
 <ul>
-    <li>GDSE</li>
-    <li>CMJD</li>
+    <li class="selected">GDSE</li>
+    <li class="selected">CMJD</li>
 </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consectetur dolorem facilis fuga incidunt laborum libero, modi natus odio provident quos, vel voluptatem! Cumque eligendi hic id quis sequi!</p>
 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolorum inventore minima neque officia rerum sapiente soluta sunt ullam! Accusamus aut cumque debitis doloribus nulla quis, veniam vero. Fugit, vitae.</p>
 </section>
 </body>
 </html>
