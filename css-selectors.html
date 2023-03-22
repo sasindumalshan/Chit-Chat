@@ -7,29 +7,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&display=swap" rel="stylesheet">
     <style>
-        /*class selector*/
-        /*type selector*/
-        /*id selector*/
-        /*attribute selector*/
-        /* Universal selector*/
+        /*Basic Selectors */
+        /*01. class selector*/
+        /*02. type selector*/
+        /*03. id selector*/
+        /*04. attribute selector*/
+        /*05. Universal selector*/
 
         /* Universal selector - select all at onece*/
-        /**{*/
-        /*    color: red;*/
-        /*    font-family: 'Edu NSW ACT Foundation', cursive;*/
-        /*}*/
+        *{
+            color: red;
+           border: 1px solid green;
+            font-family: 'Edu NSW ACT Foundation', cursive;
+        }
 
         /*type selector - select with type*/
-        /*p{*/
-        /*    color: black;*/
-        /*    background-color: orange;*/
-        /*}*/
+        p{
+            color: black;
+            background-color: orange;
+        }
 
         /*class selector - select a range of elements*/
         .selected{
+            color: orange;
             border: 1px solid red;
         }
 
+        /*id selector  - select a element uniqely*/
+        #special{
+            font-size: 100px;
+            color: deeppink;
+            font-weight: bold;
+        }
+
+        /*Attribute selector - you can select elements with attributes*/
+        [id]{
+            color: red;
+        }
 
 
     </style>
@@ -37,16 +51,16 @@
 <body>
 <section>
     <h1 class="selected">Hello CSS</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet atque, aut dolores ducimus est id ipsum
+    <p id="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet atque, aut dolores ducimus est id ipsum
         nihil perferendis, praesentium quo quod rerum sint soluta suscipit tempora temporibus unde, vel.</p>
     <h2 >Testing CSS Selectors</h2>
     <h2 class="selected">Testing CSS Selectors</h2>
-    <h2>Testing CSS Selectors</h2>
+    <h2 id="special">Testing CSS Selectors</h2>
 <ul>
     <li class="selected">GDSE</li>
     <li class="selected">CMJD</li>
 </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consectetur dolorem facilis fuga incidunt laborum libero, modi natus odio provident quos, vel voluptatem! Cumque eligendi hic id quis sequi!</p>
+    <p id="ss">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consectetur dolorem facilis fuga incidunt laborum libero, modi natus odio provident quos, vel voluptatem! Cumque eligendi hic id quis sequi!</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolorum inventore minima neque officia rerum sapiente soluta sunt ullam! Accusamus aut cumque debitis doloribus nulla quis, veniam vero. Fugit, vitae.</p>
 </section>
