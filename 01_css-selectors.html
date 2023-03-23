@@ -63,26 +63,53 @@
         /*    cursor: pointer;*/
         /*}*/
         /*select the h1 if h1 is the first child of its nearest parent*/
-        h1:nth-child(1){
-            color: red;
-        }
+        /*h1:nth-child(1){*/
+        /*    color: red;*/
+        /*}*/
         /*select the second child of a list*/
-        li:nth-child(2){
-            color: green;
-        }
+        /*li:nth-child(2){*/
+        /*    color: green;*/
+        /*}*/
         /*select the first child of a list*/
-        li:first-child{
-            color: orange;
-        }
+        /*li:first-child{*/
+        /*    color: orange;*/
+        /*}*/
         /*select the last child of a list*/
-        li:last-child{
-            color: deeppink;
-        }
+        /*li:last-child{*/
+        /*    color: deeppink;*/
+        /*}*/
 
+        /*button:active{*/
+        /*    color: red;*/
+        /*}*/
+        /*button:focus{*/
+        /*    border: 2px solid red;*/
+        /*}*/
+        /*a:visited{*/
+        /*    color: deeppink;*/
+        /*    !*font-size: 100px; not supporting*!*/
+        /*    !*background-color: orange; not supporting*!*/
+        /*}*/
+
+        /*h1:before{*/
+        /*    content: "😀";*/
+        /*    color: red;*/
+        /*    font-size: 30px;*/
+        /*}*/
+        /*h1:after{*/
+        /*    content: " 👻";*/
+        /*    color: red;*/
+        /*}*/
 
 
         /*Pseudo Elements*/
-
+        h1::first-letter{
+            color: red;
+            font-size: 30px;
+        }
+        p::first-line{
+            color: orange;
+        }
 
 
 
@@ -107,7 +134,8 @@
     <li class="selected">GDSE</li>
     <li class="selected">CMJD</li>
 </ul>
-
+    <a target="_blank" href="http://google.com">Visit Google</a>
+    <button>Test Btn</button>
     <ul>
         <li>A</li>
         <li>B</li>
