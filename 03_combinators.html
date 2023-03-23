@@ -22,10 +22,17 @@
         /*    background-color: orange;*/
         /*}*/
 
-        /*    Adjacent Combinator*/
+        /*Adjacent Combinator*/
         /*select all paras just after the h1
         p and h1 should be on the same root*/
-        h1+p{
+        /*h1+p{*/
+        /*    color: red;*/
+        /*}*/
+
+        /*General Siblings Combinator*/
+        /*select all h1s after paragraph element
+        need to be in the same root*/
+        p~h1{
             color: red;
         }
 
@@ -33,33 +40,17 @@
     </style>
 </head>
 <body>
-<h1>DDD</h1>
-<h1>Hello There</h1>
-<h1>Hello There</h1>
 <section>
-    <h1>Hello there</h1>
-    <h1>Hello there</h1>
-    <h1>Hello there</h1>
-    <main>
-        <h1>This is inside section and then main</h1>
-    </main>
-    <main>
-        <main>
-            <main>
-                <h1>DDDDD</h1>
-            </main>
-        </main>
-    </main>
-    <h1>Testing</h1>
-</section>
-<section>
-    <h1>Hello there</h1>
-    <h1>Hello there</h1>
-    <h1>Hello there</h1>
-    <p>dd</p>
+    <h1>B</h1>
+    <h1>A</h1>
+    <p>Hello</p>
+    <h1>Hello</h1>
+    <section>lore</section>
+    <h1>Hello</h1>
+    <section>lore</section>
+    <h1>Hello</h1>
+    <section>lore</section>
     <h1>Hello</h1>
 </section>
-<h1>Out of section</h1>
-
 </body>
 </html>

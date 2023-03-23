@@ -8,7 +8,7 @@
         /*select all the h1s inside sections*/
         /*change color to blue*/
         /*change font-size to 40px*/
-        h1{
+        section h1 {
             color: blue;
             font-size: 40px;
         }
@@ -17,21 +17,42 @@
         /*select all the button inside the section if a button is just after to a paragraph   */
         /*change color to red*/
         /*change font-size to 50px*/
+        section p + button {
+            color: red;
+            font-size: 50px;
+        }
 
         /*03*/
         /*select the second item of the list if the list is inside a section and just after a paragraph */
         /*change color to deeppink*/
         /*change font-size to 30px*/
 
+        section p + ul > li:nth-child(2) {
+            color: deeppink;
+            font-size: 30px;
+        }
+
         /*04*/
-        /*Select the first letter if all h2s   */
+        /*Select the first letter of all h2s   */
         /* change the color to green  */
         /* change the font size to 90px  */
+        h2::first-letter {
+            color: green;
+            font-size: 90px;
+        }
 
         /*05*/
         /*select the last para */
         /*set a border of 2px and color black */
         /* set a mix color with red and orange   */
+        body > p:last-of-type {
+            border: 2px solid black;
+            height: 100px;
+            font-size: 30px;
+            color: white;
+            background: linear-gradient(to right, blue, blueviolet);
+        }
+
 
         /*06*/
         /*select the form*/
@@ -86,7 +107,8 @@
     </ul>
     <button>Test Button</button>
 </section>
-
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci architecto asperiores, at consequuntur
+    doloribus esse facere harum libero maxime modi nulla optio qui quis recusandae rerum ullam? At, fugit!</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci architecto asperiores, at consequuntur
     doloribus esse facere harum libero maxime modi nulla optio qui quis recusandae rerum ullam? At, fugit!</p>
 
