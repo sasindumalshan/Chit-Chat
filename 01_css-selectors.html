@@ -14,36 +14,76 @@
         /*04. attribute selector*/
         /*05. Universal selector*/
 
+
+
         /* Universal selector - select all at onece*/
-        *{
-            color: red;
-           border: 1px solid green;
-            font-family: 'Edu NSW ACT Foundation', cursive;
-        }
+        /**{*/
+        /*    color: red;*/
+        /*   border: 1px solid green;*/
+        /*    font-family: 'Edu NSW ACT Foundation', cursive;*/
+        /*}*/
 
         /*type selector - select with type*/
-        p{
-            color: black;
-            background-color: orange;
-        }
+        /*p{*/
+        /*    color: black;*/
+        /*    background-color: orange;*/
+        /*}*/
 
         /*class selector - select a range of elements*/
-        .selected{
-            color: orange;
-            border: 1px solid red;
-        }
+        /*.selected{*/
+        /*    color: orange;*/
+        /*    border: 1px solid red;*/
+        /*}*/
 
-        /*id selector  - select a element uniqely*/
-        #special{
-            font-size: 100px;
-            color: deeppink;
-            font-weight: bold;
-        }
+        /*id selector  - select a element uniquely*/
+        /*#special{*/
+        /*    font-size: 100px;*/
+        /*    color: deeppink;*/
+        /*    font-weight: bold;*/
+        /*}*/
 
         /*Attribute selector - you can select elements with attributes*/
-        [id]{
+        /*[id]{*/
+        /*    color: red;*/
+        /*}*/
+
+
+        /*Grouping Selector*/
+        /*h1,h2{*/
+        /*    color: red;*/
+        /*}*/
+        /*#special,.selected{*/
+        /*    background-color: orange;*/
+        /*}*/
+
+        /*Pseudo Classes*/
+        /*apply and remove styles according to the user activities*/
+        /*p:hover{*/
+        /*    color: red;*/
+        /*    cursor: pointer;*/
+        /*}*/
+        /*select the h1 if h1 is the first child of its nearest parent*/
+        h1:nth-child(1){
             color: red;
         }
+        /*select the second child of a list*/
+        li:nth-child(2){
+            color: green;
+        }
+        /*select the first child of a list*/
+        li:first-child{
+            color: orange;
+        }
+        /*select the last child of a list*/
+        li:last-child{
+            color: deeppink;
+        }
+
+
+
+        /*Pseudo Elements*/
+
+
 
 
     </style>
@@ -51,17 +91,36 @@
 <body>
 <section>
     <h1 class="selected">Hello CSS</h1>
+    <p>lorem</p>
+    <h1 class="selected">Hello CSS</h1>
     <p id="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet atque, aut dolores ducimus est id ipsum
         nihil perferendis, praesentium quo quod rerum sint soluta suscipit tempora temporibus unde, vel.</p>
     <h2 >Testing CSS Selectors</h2>
     <h2 class="selected">Testing CSS Selectors</h2>
     <h2 id="special">Testing CSS Selectors</h2>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque deleniti eum illo magnam natus, officiis praesentium ratione reiciendis sint sunt tenetur? Deserunt dolorem inventore numquam quas rem sunt suscipit?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque deleniti eum illo magnam natus, officiis praesentium ratione reiciendis sint sunt tenetur? Deserunt dolorem inventore numquam quas rem sunt suscipit?</p>
+        <h1>Inside the inner section</h1>
+    </section>
 <ul>
     <li class="selected">GDSE</li>
     <li class="selected">CMJD</li>
 </ul>
-    <p id="ss">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consectetur dolorem facilis fuga incidunt laborum libero, modi natus odio provident quos, vel voluptatem! Cumque eligendi hic id quis sequi!</p>
 
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <p id="ss">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consectetur dolorem facilis fuga incidunt laborum libero, modi natus odio provident quos, vel voluptatem! Cumque eligendi hic id quis sequi!</p>
+    <ol>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ol>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolorum inventore minima neque officia rerum sapiente soluta sunt ullam! Accusamus aut cumque debitis doloribus nulla quis, veniam vero. Fugit, vitae.</p>
 </section>
 </body>
