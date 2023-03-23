@@ -11,20 +11,33 @@
 
         /*h1 should be a direct child of section*/
         /*h1 should be in the root of section*/
-        section>h1{ /*child*/
-            color: red;
-        }
+        /*section>h1{ !*child*!*/
+        /*    color: red;*/
+        /*}*/
 
         /* In here there is no need to be a direct child
         h1 can be anywhere inside the section
         */
-        section h1{ /*descendent*/
-            background-color: orange;
+        /*section h1{ !*descendent*!*/
+        /*    background-color: orange;*/
+        /*}*/
+
+        /*    Adjacent Combinator*/
+        /*select all paras just after the h1
+        p and h1 should be on the same root*/
+        h1+p{
+            color: red;
         }
+
+
     </style>
 </head>
 <body>
+<h1>DDD</h1>
+<h1>Hello There</h1>
+<h1>Hello There</h1>
 <section>
+    <h1>Hello there</h1>
     <h1>Hello there</h1>
     <h1>Hello there</h1>
     <main>
@@ -42,6 +55,9 @@
 <section>
     <h1>Hello there</h1>
     <h1>Hello there</h1>
+    <h1>Hello there</h1>
+    <p>dd</p>
+    <h1>Hello</h1>
 </section>
 <h1>Out of section</h1>
 
