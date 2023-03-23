@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Cascade</title>
+    <style>
+        *{
+            color: red;
+        }
+        h1{
+            color: green;
+        }
+        #mainHeader{
+            color: orange;
+        }
+        .mainHeader{
+            color: deeppink;
+        }
+        [id]{
+            color: blueviolet;
+        }
+        :first-child{
+            color: aqua;
+        }
 
+    </style>
 </head>
 <body>
-<h1>What is Cascade.?</h1>
+<h1 id="mainHeader" class="mainHeader">What is Cascade.?</h1>
+
 </body>
 </html>
