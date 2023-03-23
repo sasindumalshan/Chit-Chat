@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Combinators</title>
+    <style>
+        /*01. Child Combinator*/
+        /*02. Decendant Combinator */
+        /*03. General Siblings Combinator */
+        /*04. Adjacent Combinator */
+        /*h1 should be a direct child of section*/
+        /*h1 should be in the root of section*/
+        section>h1{ /*child*/
+            color: red;
+        }
+
+        /* In here there is no need to be a direct child
+        h1 can be anywhere inside the section
+        */
+        section h1{ /*descendent*/
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>Hello there</h1>
+    <h1>Hello there</h1>
+    <main>
+        <h1>This is inside section and then main</h1>
+    </main>
+    <main>
+        <main>
+            <main>
+                <h1>DDDDD</h1>
+            </main>
+        </main>
+    </main>
+    <h1>Testing</h1>
+</section>
+<section>
+    <h1>Hello there</h1>
+    <h1>Hello there</h1>
+</section>
+<h1>Out of section</h1>
+
+</body>
+</html>
