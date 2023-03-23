@@ -60,6 +60,24 @@
         /* change all the placeholder colors of the input fields   */
         /*change the file upload button colors into modern colors - give it a modern look and feelg*/
 
+        form input{
+            border: 2px solid blueviolet;
+        }
+        form input::placeholder{
+            color: blueviolet;
+        }
+        form #pic{
+            border: none;
+        }
+
+        form #pic::file-selector-button{
+            border: none;
+            background: blueviolet;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
 
     </style>
 </head>
@@ -115,9 +133,9 @@
 <h1>Testing </h1>
 <form action="">
     <label for="id">User ID</label>
-    <input type="text" id="id">
+    <input type="text" id="id" placeholder="Input Your ID">
     <label for="name">User Name</label>
-    <input type="text" id="name">
+    <input type="text" id="name" placeholder="Input Your Name">
     <label for="pic">User Name</label>
     <input type="file" id="pic">
     <button>Register</button>
