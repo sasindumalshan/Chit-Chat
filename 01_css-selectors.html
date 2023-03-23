@@ -103,13 +103,33 @@
 
 
         /*Pseudo Elements*/
-        h1::first-letter{
-            color: red;
-            font-size: 30px;
-        }
-        p::first-line{
-            color: orange;
-        }
+        /*h1::first-letter{*/
+        /*    color: red;*/
+        /*    font-size: 30px;*/
+        /*}*/
+        /*p::first-line{*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*p::selection{*/
+        /*    background-color: red;*/
+        /*    color: white;*/
+        /*}*/
+        /*li::marker{*/
+        /*    content: "@";*/
+        /*    color: red;*/
+        /*}*/
+        /*input::placeholder{*/
+        /*    color: green;*/
+        /*}*/
+
+        /*input::file-selector-button{*/
+        /*    color: white;*/
+        /*    background-color: blue;*/
+        /*    border: none;*/
+        /*    border-radius: 10px;*/
+        /*}*/
+
 
 
 
@@ -117,6 +137,7 @@
 </head>
 <body>
 <section>
+    <input type="file">
     <h1 class="selected">Hello CSS</h1>
     <p>lorem</p>
     <h1 class="selected">Hello CSS</h1>
@@ -134,6 +155,7 @@
     <li class="selected">GDSE</li>
     <li class="selected">CMJD</li>
 </ul>
+    <input type="text" placeholder="Input Your Name">
     <a target="_blank" href="http://google.com">Visit Google</a>
     <button>Test Btn</button>
     <ul>
