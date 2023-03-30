@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <title>CSS Cascade Task 2</title>
     <style>
+        /*<!-- 1 -->*/
         *{
             color: red;
         }
 
+        /*1 + 1 + 1 + 1 = 4*/
         section>section>div>h1{
             color: darkgoldenrod;
         }
 
+        /*1 + 1 + 1 + 1 + 1 = 5*/
         body>section>section>div>h1{
             color: green;
         }
 
+        /*1 + 1 + 10 + 1 + 1 + 1 = 15*/
         body>section:nth-child(2)>section>div>h1{
             color: deeppink;
         }
 
+        /*1 + 100 + 1 + 100 + 10 + 1 +  100 + 1 + 1 = 315*/
         body#mainBody>section#mainSection:nth-child(2)>section#subSection>div>h1{
             color: peru;
         }
 
+        /*1 + 100 + 1 + 100 + 10 + 1 + 100 + 1 + 100 + 1 + 100 = 515*/
         body#mainBody>section#mainSection:nth-child(2)>section#subSection>div#container>h1#mainHeader{
             color: orangered;
         }
 
+        /*1 + 100 + 10 + 1 + 100 + 10 + 10 + 1 + 100 + 10 + 1 + 100 + 10 + 1 + 100+ 10 = 565*/
         body#mainBody.bodyClass>section#mainSection.mainClass:nth-child(2)>section#subSection.subClass>div#container.containerClass>h1#mainHeader.mainHeader{
             color: yellow;
         }
 
+        /*1 + 100 +10+ 1 + +100 + 10 + 1 + 100 + 10 + 1 + 100 + 10 + 1 +100 + 10 = 555*/
         body#mainBody.bodyClass section#mainSection.mainClass>section#subSection.subClass>div#container.containerClass>h1#mainHeader.mainHeader{
             color: aqua;
         }
@@ -44,6 +52,7 @@
 <section id="mainSection" class="mainClass">
     <section id="subSection" class="subClass">
         <div id="container" class="containerClass">
+            <!--1000-->
             <h1 id="mainHeader" style="color: brown" class="mainHeader">What is Cascade.?</h1>
         </div>
     </section>
@@ -51,3 +60,14 @@
 
 </body>
 </html>
+
+<!--Cascade-->
+brown 1000
+yellow 565
+aqua 555
+orangered 515
+peru 315
+deeppink 15
+green 5
+darkgoldenrod 4
+red 1
