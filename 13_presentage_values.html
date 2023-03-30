@@ -12,11 +12,24 @@
 
         section>div{
             border: 2px solid red;
+            /*Using with relative lengths*/
             /*get the parent with and
             calculate 50% from it
             800/2 = 400px(computed value) */
             width: 50%;
             height: 50%;
+        }
+
+        section>div:nth-child(1){
+            background: url("assets/img/image.png");
+            background-size: cover;
+            background-position: center;
+            /*filter: saturate(1.2) blur(2px);*/
+        }
+        section>div:nth-child(2){
+            background: url("assets/img/cat.png");
+            background-size: cover;
+            background-position: center;
         }
 
     </style>
