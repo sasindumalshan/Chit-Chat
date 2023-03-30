@@ -5,31 +5,39 @@
     <title>CSS Cascade Task 3</title>
     <style>
 
+        /*1*/
         h1 {
             color: orangered;
         }
 
+        /*103*/
         #mainBody main section h1{
             color: deeppink;
         }
 
+        /*206*/
         #mainBody main article section section div h1#mainHeader{
             color: red;
         }
 
+        /*102*/
         #firstSection+article h1{
             color: darkgoldenrod;
         }
 
+        /*826*/
         #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container h1#mainHeader{
             color: aqua;
         }
 
+        /*846*/
         #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container.containerClass h1#mainHeader.mainHeader{
             color: darkmagenta !important;
         }
+
+        /*846*/
         #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container.containerClass h1#mainHeader.mainHeader{
-            color: fuchsia;
+            color: fuchsia !important;
         }
 
     </style>
@@ -54,4 +62,16 @@
 
 </body>
 </html>
+
+<!--brown -1000-->
+<!--fuchsia - 846-->
+<!--darkmagenta - 846-->
+<!--aqua - 826-->
+<!--red - 206-->
+<!--deeppink - 103-->
+<!--darkgoldenrod - 102-->
+<!--orangered - 1-->
+
+
+
 
