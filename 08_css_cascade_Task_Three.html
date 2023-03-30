@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Cascade Task 3</title>
+    <style>
+
+        h1 {
+            color: orangered;
+        }
+
+        #mainBody main section h1{
+            color: deeppink;
+        }
+
+        #mainBody main article section section div h1#mainHeader{
+            color: red;
+        }
+
+        #firstSection+article h1{
+            color: darkgoldenrod;
+        }
+
+        #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container h1#mainHeader{
+            color: aqua;
+        }
+
+        #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container.containerClass h1#mainHeader.mainHeader{
+            color: darkmagenta !important;
+        }
+        #mainBody.bodyClass main#mainMain.mainMainClass>#firstSection+article#mainArticle>section#mainSection>section#subSection>div#container.containerClass h1#mainHeader.mainHeader{
+            color: fuchsia;
+        }
+
+    </style>
+</head>
+
+<body id="mainBody" class="bodyClass">
+<main id="mainMain" class="mainMainClass">
+    <section id="firstSection">
+
+    </section>
+    <article id="mainArticle">
+        <section id="mainSection" class="mainClass">
+            <section id="subSection" class="subClass">
+                <div id="container" class="containerClass">
+                    <h1 id="mainHeader" style="color: brown" class="mainHeader">What is Cascade.?</h1>
+                </div>
+            </section>
+        </section>
+    </article>
+</main>
+
+
+</body>
+</html>
+
