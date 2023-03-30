@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Relative Measurement Units</title>
-  <style>
-    section{
-      /*font-size: 20px;*/
-    }
-    section>h1{
-      /*generate the computer value from its parent font-size
-        parent font-size 20
-        1 em
-        20 * 1 = 20px(computed value)
-        */
-      font-size: 1em;
-    }
+    <style>
+        html{
+            font-size: 30px;
+        }
 
-    section>h2{
-      /*generate the computer value from its parent font-size
-       parent font-size 20
-       2 em
-       20 * 2 = 40px(computed value)
-     */
-      font-size: 2em;
-    }
-  /*default 16*/
-  /*  get the nearest parent size to generate the computed value*/
-  </style>
+        section {
+            /*font-size: 20px;*/
+        }
+
+        section > h1 {
+            /*generate the computer value from its parent font-size
+              parent font-size 20
+              1 em
+              20 * 1 = 20px(computed value)
+              */
+            font-size: 1em;
+        }
+
+        section > h2 {
+            /*generate the computer value from its parent font-size
+             parent font-size 20
+             2 em
+             20 * 2 = 40px(computed value)
+           */
+            font-size: 2rem;
+        }
+
+        /*rem depend on the html elements font-size*/
+        /*default 16*/
+
+        /*  get the nearest parent size to generate the computed value*/
+
+        div{
+            width: 50vw;
+            height: 50vh;
+            background: red;
+        }
+
+
+    </style>
 </head>
 <body>
 <main>
-  <section>
-    <h1>They will  depend upon other to generate computed value</h1>
-    <h2>What are the Relative Measurement Units available</h2>
-    <ul>
-      <li>em (nearest element)</li>
-      <li>rem ()</li>
-      <li>vh</li>
-      <li>vw</li>
-    </ul>
-  </section>
+    <section>
+        <h1>They will depend upon other to generate computed value</h1>
+        <h2>What are the Relative Measurement Units available</h2>
+        <ul>
+            <li>em (nearest element)</li>
+            <li>rem (Root element)</li>
+            <li>vh</li>
+            <li>vw</li>
+        </ul>
+    </section>
 </main>
+<div>
+
+</div>
 </body>
 </html>
