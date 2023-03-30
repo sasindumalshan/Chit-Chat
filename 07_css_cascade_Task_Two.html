@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Cascade Task 2</title>
+    <style>
+        *{
+            color: red;
+        }
+
+        section>section>div>h1{
+            color: darkgoldenrod;
+        }
+
+        body>section>section>div>h1{
+            color: green;
+        }
+
+        body>section:nth-child(2)>section>div>h1{
+            color: deeppink;
+        }
+
+        body#mainBody>section#mainSection:nth-child(2)>section#subSection>div>h1{
+            color: peru;
+        }
+
+        body#mainBody>section#mainSection:nth-child(2)>section#subSection>div#container>h1#mainHeader{
+            color: orangered;
+        }
+
+        body#mainBody.bodyClass>section#mainSection.mainClass:nth-child(2)>section#subSection.subClass>div#container.containerClass>h1#mainHeader.mainHeader{
+            color: yellow;
+        }
+
+        body#mainBody.bodyClass section#mainSection.mainClass>section#subSection.subClass>div#container.containerClass>h1#mainHeader.mainHeader{
+            color: aqua;
+        }
+    </style>
+</head>
+<body id="mainBody" class="bodyClass">
+<section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque culpa dicta distinctio nemo nihil nulla possimus quaerat quasi quia quo ratione, rerum tempora temporibus voluptatibus! Aperiam dolor ex quidem?</p>
+</section>
+<section id="mainSection" class="mainClass">
+    <section id="subSection" class="subClass">
+        <div id="container" class="containerClass">
+            <h1 id="mainHeader" style="color: brown" class="mainHeader">What is Cascade.?</h1>
+        </div>
+    </section>
+</section>
+
+</body>
+</html>
