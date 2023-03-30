@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative Measurement Units</title>
+  <style>
+    section{
+      /*font-size: 20px;*/
+    }
+    section>h1{
+      /*generate the computer value from its parent font-size
+        parent font-size 20
+        1 em
+        20 * 1 = 20px(computed value)
+        */
+      font-size: 1em;
+    }
+
+    section>h2{
+      /*generate the computer value from its parent font-size
+       parent font-size 20
+       2 em
+       20 * 2 = 40px(computed value)
+     */
+      font-size: 2em;
+    }
+
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>They will not depend upon other to generate computed value</h1>
+    <h2>What are the Absolute Measurement Units available</h2>
+    <ul>
+      <li>em</li>
+      <li>rem</li>
+      <li>vh</li>
+      <li>vw</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
