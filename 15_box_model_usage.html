@@ -4,42 +4,58 @@
     <meta charset="UTF-8">
     <title>CSS Box Model Usage Task One</title>
     <style>
-        div {
+        section{
+            width: 980px;
+            height: 500px;
+            border: 2px dashed black;
+        }
+        section>div {
             width: 200px;
             height: 50px;
             border: 2px solid black;
             margin-top: 13px;
         }
 
-        div:nth-child(2){
+        section>div:nth-child(2){
             margin-left: 80px;
         }
-        div:nth-child(3){
+        section>div:nth-child(3){
             margin-left: 175px;
         }
 
-        div:nth-child(4){
+        section>div:nth-child(4){
             margin-left: 310px;
         }
 
-        div:nth-child(5){
+        section>div:nth-child(5){
             margin-left: 440px;
         }
 
-        img{
+        section>img:nth-child(6){
             margin-left: 644px;
             width: 320px;
             margin-top: -217px;
         }
+
+        section>img:nth-child(7){
+            margin-left: 644px;
+            width: 320px;
+            margin-top: -110px;
+        }
     </style>
 </head>
 <body>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<img src="assets/img/sc.gif" alt="">
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <img src="assets/img/sc.gif" alt="">
+    <img src="assets/img/giphy.gif" alt="">
+
+</section>
+
 
 
 </body>
