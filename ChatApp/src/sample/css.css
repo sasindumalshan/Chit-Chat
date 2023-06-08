@@ -1,0 +1,19 @@
+.detail-box{
+    -fx-background-radius: 50;
+    -fx-background-color:#343750 ;
+    -fx-text-fill: white;
+    -fx-font-family: "Wingdings 3";
+}
+.txt{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.send-Button{
+    -fx-background-radius: 20;
+    -fx-background-color: #27C968;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.scroll-pane-my{
+    -fx-background-color: #343750;
+}

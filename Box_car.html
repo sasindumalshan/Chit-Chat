@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box_car</title>
+  <style>
+    section{
+      position: relative;
+      top: 300px;
+      height: 400px;
+      width: 400px;
+      border: solid ;
+    }
+    img{
+        transform: rotate(0);
+      position: absolute;
+    }
+    img:nth-child(2){
+      bottom: 0;
+      right: 0;
+    }
+    img:nth-child(3){
+      right: 0;
+      top: 0;
+    }
+    img:nth-child(4){
+        top: 0;
+    }
+    section>img:nth-child(6){
+      bottom: 0;
+      right: 5%;
+    }
+    section>img:nth-child(5){
+      bottom: 50%;
+      right: 40%;
+    }
+    div{
+      position: relative;
+      height: 20px;
+      width: 70px;
+      border: solid;
+      margin-top: 20px;
+      margin-left: 5px;
+    }
+    div:nth-child(2){
+      left: 2%;
+    }
+    div:nth-child(3){
+      left: 5%;
+    }
+    div:nth-child(4){
+      left: 10%;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <img src="assets/img/human.png" alt="man" width="100px">
+  <img src="assets/img/-car-automatic-transmission.png" alt="car" width="100px">
+</section>
+<img src="assets/img/challenger-demon-compact-car-car.png" alt="car" width="300px">
+<img src="assets/img/transport-helicopter.png" alt="car" width="200px">
+<img src="assets/img/Cartoon-Sun-PNG.png" alt="sun" width="100px">
+</body>
+</html>

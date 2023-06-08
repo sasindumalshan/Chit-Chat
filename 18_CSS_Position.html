@@ -4,20 +4,69 @@
     <meta charset="UTF-8">
     <title>CSS Positions</title>
     <style>
-        div{
-            width: 300px;
-            height: 100px;
-            border: 2px solid black;
+        *{
+
         }
-        div:nth-child(1){
-            left: 100px;
+        section{
+            position: relative;
             top: 100px;
+            height: 300px;
+            width: 300px;
+            border: solid ;
         }
+
+        section>div{
+            height: 100px;
+            width: 100px;
+
+        }
+        section>div:nth-child(1){
+            position: absolute;
+
+        }
+        section>div:nth-child(2){
+            position: absolute;
+            right: 0;
+        }
+        section>div:nth-child(3){
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+        section>div:nth-child(4){
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        section>div:nth-child(5){
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+
     </style>
 </head>
 <body>
-<div></div>
-<div></div>
-<div></div>
+
+<!--    <div style="background-color: deepskyblue"></div>-->
+<!--    <div></div>-->
+<!--    <div></div>-->
+    <section>
+
+            <div style="background-color: chartreuse"></div>
+            <div style="background-color: deeppink"></div>
+            <div style="background-color: deepskyblue"></div>
+            <div style="background-color: gold"></div>
+            <div style="background-color: blueviolet"></div>
+
+
+    </section>
+
+
+
 </body>
 </html>

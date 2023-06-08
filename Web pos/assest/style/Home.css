@@ -1,0 +1,38 @@
+#Business-Name >h1:nth-child(1){
+    font-family: 'Righteous', cursive;
+    font-size: 90px;
+    color:  #F8D7AE;
+
+}
+#Home{
+    height: 100Vh;
+    width: 99vw;
+    /*background-color: #F8D7AE;*/
+    position: absolute;
+
+}
+ p{
+    /*border: solid black 1px;*/
+
+}
+ #bg-img{
+     height: 600px;
+ }
+#Business-Name{
+    position: absolute;
+    margin-top: 10%;
+
+}
+#button-start{
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+}
+#icon{
+    font-size: 40px;
+}
+
+
+#icon > i{
+   margin-right: 30px;
+}

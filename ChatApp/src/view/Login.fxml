@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="262.0" prefWidth="632.0" stylesheets="@style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane prefHeight="261.0" prefWidth="632.0" styleClass="login-box">
+         <children>
+            <ImageView fitHeight="229.0" fitWidth="245.0" layoutX="388.0" layoutY="23.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/image/3905521_82250-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="221.0" layoutY="173.0" minWidth="50.0" onAction="#OkOnAction" prefHeight="45.0" prefWidth="191.0" styleClass="login-button">
+               <graphic>
+                  <GridPane prefHeight="35.0" prefWidth="162.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="74.0" minWidth="10.0" prefWidth="62.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assest/image/icons8-send-30.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="add-contact" text="Let's Chat" wrappingWidth="108.98307228088379" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="182.0" layoutX="20.0" layoutY="23.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/image/33632377_speech_bubble_06a-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="213.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login-pane-text" text="Chit Chat" textAlignment="CENTER" wrappingWidth="190.9830722808838" />
+            <JFXTextField alignment="CENTER" focusColor="#405aa800" layoutX="180.0" layoutY="104.0" prefHeight="33.0" prefWidth="272.0" promptText="Your Name" styleClass="search-bar" unFocusColor="#4d4d4d00" />
+         </children>
+      </Pane>
+   </children>
+   <styleClass>
+      <String fx:value="login-pane" />
+      <String fx:value="vbox" />
+   </styleClass>
+</AnchorPane>

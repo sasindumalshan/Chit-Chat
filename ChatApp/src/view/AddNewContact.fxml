@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="169.0" prefWidth="363.0" style="-fx-background-color: #FBFAFF;" stylesheets="@style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddNewContactController">
+   <children>
+      <JFXTextField fx:id="txtUserNAme" alignment="CENTER" focusColor="#405aa800" layoutX="42.0" layoutY="28.0" prefHeight="33.0" prefWidth="272.0" promptText="User Name" styleClass="search-bar" unFocusColor="#4d4d4d00" />
+      <JFXTextField fx:id="txtName" alignment="CENTER" focusColor="#405aa800" layoutX="42.0" layoutY="69.0" prefHeight="33.0" prefWidth="272.0" promptText="Neme" styleClass="search-bar" stylesheets="@style/Dashboard.css" unFocusColor="#4d4d4d00" />
+      <JFXButton layoutX="92.0" layoutY="117.0" minWidth="47.0" onAction="#addNewContactOnAction" prefHeight="40.0" prefWidth="177.0" styleClass="add-contact" text="ADD to Contact">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/image/icons8-add-administrator-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

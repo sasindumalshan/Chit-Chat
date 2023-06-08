@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Inline</title>
+  <style>
+    #main{
+      background-color: lavender;
+      border: solid 2px;
+      display: inline-block;
+      height: 200px;
+      padding: 2px 2px 2px 2px;
+    }
+
+    section>section{
+      height: 100%;
+      width: 200px;
+      border: solid black;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    section>section:hover{
+      background-color: deepskyblue;
+    }
+
+    /*section>section:nth-child(1):hover()selection:nth-child(2){*/
+    /* background-color: deepskyblue;*/
+    /*}*/
+    section:nth-child(1){
+      background-color: deeppink;
+    }
+    section:nth-child(2){
+      background-color: chartreuse;
+    }
+    section:nth-child(3){
+      background-color: gold;
+    }
+    section:nth-child(4){
+      background-color: lightskyblue;
+    }
+  </style>
+</head>
+<body>
+<section id="main">
+  <section>
+
+  </section>
+  <section>
+
+  </section>
+  <section>
+
+  </section>
+  <section>
+
+  </section>
+</section>
+
+</body>
+</html>
