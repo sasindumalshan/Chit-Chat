@@ -45,7 +45,7 @@ public class Server {
     }
 
     /**
-     * sent text
+     * sent text to client
      */
     protected static void sendText(Socket clientSocket, String message) throws IOException {
 
