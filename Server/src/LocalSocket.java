@@ -1,44 +1,75 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
+import java.nio.ByteBuffer;
 
 public class LocalSocket {
+    private DataInputStream dataInputStream;
+    private String message = "";
     private Socket clientSocket;
-    DataInputStream dataInputStream;
-    String message="";
-    ArrayList<String>messages=new ArrayList<>();
-    public  Socket getSocket(){
+
+    public Socket getSocket() {
         return clientSocket;
     }
-    public void newServer(Socket socket){
-        new Thread(()->{
+
+    public void newServer(Socket socket) {
+        new Thread(() -> {
 
             clientSocket = socket;
             System.out.println("Client add ... !");
-            System.out.println("clientSocket               "+clientSocket);
+            System.out.println("clientSocket               " + clientSocket);
 
             try {
-                dataInputStream=new DataInputStream(clientSocket.getInputStream());
-                while (!message.equals("Finish")){
-                    message=dataInputStream.readUTF();
-                    System.out.println("client message > "+message);
-                    messages.add(message);
-                    if (messages.size()==2){
-                        for (int i = 0; i < Server.localSockets.size(); i++) {
-                            if (Integer.parseInt(messages.get(0))==Server.localSockets.get(i).getSocket().getPort()){
-                                System.out.println("send( "+Server.localSockets.get(i).getSocket()+" , "+messages.get(1)+" ) ");
-                                Server.sendText(Server.localSockets.get(i).getSocket(),messages.get(1));
-                                System.out.println("send");
-                                messages.clear();
-                                break;
-                            }
-                        }
+                dataInputStream = new DataInputStream(clientSocket.getInputStream());
+
+                while (!message.equals("Finish")) {
+
+                    /**
+                     * Check Type
+                     * */
+                    String clientType = dataInputStream.readUTF();
+
+                    /**
+                     * Read Text
+                     * */
+                    if (clientType.equals("STRING")) {
+                        message = dataInputStream.readUTF();
+                        Server.send(message);
+                    }
+                    /**
+                     * Read Image
+                     * */
+                    else if (clientType.equals("IMAGE")) {
+
+                        System.out.println("Reading: " + System.currentTimeMillis());
+
+                        byte[] sizeAr = new byte[4];
+                        dataInputStream.read(sizeAr);
+                        int size = ByteBuffer.wrap(sizeAr).asIntBuffer().get();
+
+                        byte[] imageAr = new byte[size];
+                        dataInputStream.read(imageAr);
+
+                        BufferedImage image = ImageIO.read(new ByteArrayInputStream(imageAr));
+
+                        Server.sendImage(image, clientSocket.getPort());
 
                     }
+                    /**
+                     * Read Emoji
+                     * */
+                    else if (clientType.equals("EMOJI")) {
+
+                    }
+
                 }
+
+
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
 
         }).start();
